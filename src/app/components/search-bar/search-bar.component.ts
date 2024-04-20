@@ -10,6 +10,6 @@ export class SearchBarComponent {
 
   onSearch(event: Event) {
     const value = (event.target as HTMLInputElement).value;
-    this.globalFilterChange.emit(value); // Emit the value to the parent component
+    this.globalFilterChange.emit(value); 
   }
 }

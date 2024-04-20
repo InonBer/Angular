@@ -18,7 +18,7 @@ export class AppComponent implements OnInit {
 
   @Output() columnToggled = new EventEmitter<string>();
   users: User[] = [];
-  filteredUsers: User[] = []; // This will hold the filtered list of users
+  filteredUsers: User[] = []; 
 
   rangeValues: number[] = [0, 150];
   columnVisibility: { [key: string]: boolean } = {
@@ -48,7 +48,6 @@ export class AppComponent implements OnInit {
 
   constructor(private dataService: DataServiceService) {}
 
-  // Push a search term into the observable stream.
   onGlobalFilterChange(term: string): void {
     this.searchTerms.next(term);
   }
@@ -75,12 +74,10 @@ export class AppComponent implements OnInit {
       switchMap(([term, rangeDates, selectedSex]) => {
         const startYear = rangeDates?.[0]?.getFullYear();
         const endYear = rangeDates?.[1]?.getFullYear();
-        // The dataService needs to be capable of handling the sex filter
         return this.dataService.getFilteredUsers(term, startYear, endYear, selectedSex);
       })
     ).subscribe(data => {
       this.users = data;
-     // this.applyFilters();
     });
   }
   onAgeFilter(){
@@ -91,7 +88,6 @@ export class AppComponent implements OnInit {
     if (this.rangeDates) {
       this.rangeDatesSubject.next(this.rangeDates);
     } else {
-      // If rangeDates is not set (cleared), we want to remove the age filter
       this.rangeDatesSubject.next(undefined);
     }
   }
