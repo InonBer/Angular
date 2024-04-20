@@ -1,0 +1,103 @@
+.app-continer{
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+.table-holder{
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // width: 80%;
+
+    .table-filter-container{
+        display: flex;
+        justify-content: center;
+        //align-items: center;
+        flex-direction: row-reverse;
+        gap: 10px;
+    }
+
+    .filter-holder{
+        align-self: flex-start;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+        padding-top: 20px;
+        flex-direction: column;
+
+        .search-by-name{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            flex-direction: column;
+            .search-by-name-title{
+                font-size: 20px;
+                font-weight: bold;
+                text-align: center;
+            }
+        }
+        .age-filter-holder{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            flex-direction: column;
+            .age-filter-title{
+                font-size: 20px;
+                font-weight: bold;
+                text-align: center;
+            }
+        }
+        .sex-filter-holder{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            flex-direction: column;
+        
+            .sex-filter-title{
+                font-size: 20px;
+                font-weight: bold;
+                text-align: center;
+            }
+        }
+        .col-filter-holder{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            flex-direction: column;
+            .col-filter-title{
+                font-size: 20px;
+                font-weight: bold;
+                text-align: center;
+            }
+            .col-filter-btns{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                flex-direction: row;
+               
+            }
+        }
+    }
+
+}    
+}
+
+.agerange-btns{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-direction: row;
+
+    p-inputNumber{
+        max-width: 10px;
+    }
+}

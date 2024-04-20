@@ -1,0 +1,40 @@
+<div class="table-container">
+
+    <p-table 
+    [paginator]="true"
+         [rows]="10"
+         [rowsPerPageOptions]="[10,20,30]"
+         [value]="users"
+    >
+    
+        <ng-template pTemplate="header">
+            <tr>
+                <th style="width:80px" *ngIf="columnVisibility['id']" pSortableColumn="id">ID
+                  <p-sortIcon field="id"></p-sortIcon>
+                </th>
+                <th style="width:200px" *ngIf="columnVisibility['name']" pSortableColumn="name">Name
+                  <p-sortIcon field="name"></p-sortIcon>
+                </th>
+                <th style="width:100px" *ngIf="columnVisibility['age']" pSortableColumn="age">Age
+                  <p-sortIcon field="age"></p-sortIcon>
+                </th>
+                <th style="width:150px" *ngIf="columnVisibility['sex']" pSortableColumn="sex">Sex
+                  <p-sortIcon field="sex"></p-sortIcon>
+                </th>
+                <th style="width:200px" *ngIf="columnVisibility['address']" pSortableColumn="address">Address
+                  <p-sortIcon field="address"></p-sortIcon>
+                </th>
+              </tr>
+                    </ng-template>
+        <ng-template pTemplate="body" let-user>
+            <tr>
+                <td *ngIf="columnVisibility['id']">{{ user.id }}</td>
+                <td *ngIf="columnVisibility['name']"> <img class="user-img" [src]="getUserImageUrl(user.name)" alt="User Image">{{ user.name }}</td>
+                <td *ngIf="columnVisibility['age']">{{ user.age }}</td>
+                <td *ngIf="columnVisibility['sex']">{{ user.sex }}</td>
+                <td *ngIf="columnVisibility['address']">{{ user.address }}</td>
+            </tr>
+        </ng-template>
+    </p-table>
+</div>
+  

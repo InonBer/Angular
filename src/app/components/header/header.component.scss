@@ -1,0 +1,32 @@
+.app-header{
+    background-color: #074173;
+    padding: 10px 0;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.1);
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .header-title{
+        color: #fff;
+        font-size: 12px;
+        font-weight: 600;
+        margin-left: 20px;
+    }
+
+    .header-menu{
+        display: flex;
+        color: #5DEBD7;
+        gap: 10px;
+        margin-right: 20px;
+        display: flex;
+        align-items: center;
+        .header-item{
+            cursor: pointer;
+            font-weight: 600;
+            &:hover{
+                color: #5DEBD7;
+            }
+        }
+    }
+
+}
