@@ -1,6 +1,6 @@
 import { Component, Input, SimpleChanges, OnChanges } from '@angular/core';
+import { User } from '../../interfaces/user';
 
-import { User } from '../../services/data-service.service';
 @Component({
   selector: 'app-data-table',
   templateUrl: './data-table.component.html',
